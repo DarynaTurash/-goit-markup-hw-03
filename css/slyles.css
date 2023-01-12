@@ -25,12 +25,58 @@ body {
     list-style-type: none;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding-left: 0;
+}
+
+.container {
+    width: 1158px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
 /* header */
 .header {
     background-color: #FFFFFF;
+    border-bottom: 1px solid #E7E9FC;
 }
 
+.container.header {
+    display: flex;
+    align-items: center;
+}
+
+.header-navigation {
+    display: flex;
+    margin-right: auto;
+}
+
+
+
 .header-logo {
+    display: inline-block;
+    margin-right: 76px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
     font-family: 'Raleway';
     font-weight: 800;
     font-size: 18px;
@@ -38,6 +84,7 @@ body {
     text-transform: uppercase;
 
     color: var(--header-text);
+
 }
 
 .logo-acent {
@@ -46,6 +93,10 @@ body {
 
 
 .header-link {
+    display: inline-block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -54,6 +105,17 @@ body {
     color: var(--header-text);
 }
 
+.header-list {
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.header-item:not(:last-child) {
+    margin-right: 40px;
+}
+
+
 .header-link:hover,
 .header-link:focus {
     color:  var(--hover-focus-color);
@@ -61,6 +123,10 @@ body {
 
 .contacts-email,
 .contacts-phone {
+    display: inline-block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
     font-style: normal;
     font-size: 16px;
     line-height: 1.5;
@@ -76,12 +142,27 @@ body {
 color: var(--hover-focus-color);
 }
 
+.contacts-list {
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+}
+
+.contacts-item:not(:last-child) {
+    margin-right: 40px;
+}
+
+
+
 /* hero */
 .hero {
     background-color: var(--overlays-shadows-headings);
 }
 
 .hero-title {
+    margin-bottom: 48px;
+
     font-weight: 700;
     font-size: 56px;
     line-height: 1.07;
@@ -92,6 +173,13 @@ color: var(--hover-focus-color);
 }
 
 .hero-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0;
+    padding: 0;
+    padding: 16px 32px;
+
     font-family: 'Roboto';
     font-weight: 500;
     font-size: 16px;
@@ -101,6 +189,8 @@ color: var(--hover-focus-color);
 
     background-color: var(--acent-color);
     color: var(--contrast-color-of-text);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
 
     cursor: pointer;
 }
@@ -116,6 +206,8 @@ color: var(--hover-focus-color);
 }
 
 .values-title {
+    margin-bottom: 72px;
+
     font-weight: 700;
     font-size: 36px;
     line-height: 1.1;
@@ -127,14 +219,21 @@ color: var(--hover-focus-color);
 }
 
 .values-list {
+    display: flex;
+    flex-wrap: wrap;
+    }
 
+.values-list > .values-item {
+    flex-basis: calc(100% / 4 - 24px);
 }
 
-.values-item {
-
+.values-item:not(:nth-child(4n)) {
+    margin-right: 24px;
 }
 
 .values-subtitle {
+    margin-bottom: 8px;
+
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -150,11 +249,14 @@ color: var(--hover-focus-color);
 }
 
 /* services */
-.services {
+.section.services {
+    padding-top: 0;
 
 }
 
 .services-title {
+    margin-bottom: 72px; 
+
     font-weight: 700;
     font-size: 36px;
     line-height: 1.1;
@@ -167,11 +269,17 @@ color: var(--hover-focus-color);
 }
 
 .services-list {
+    display: flex;
+    flex-wrap: wrap;
 
 }
 
-.services-item {
+.services-item:not(:nth-child(3n)) {
+    margin-right: 24px;
+}
 
+.secvices-list > .services-item {
+    flex-basis: calc(100% / 4 - 24px);
 }
 
 .services-img {
@@ -184,6 +292,7 @@ background-color: var(--light-background);
 }
 
 .team-title {
+    margin-bottom: 72px;
 
     font-weight: 700;
     font-size: 36px;
@@ -197,11 +306,18 @@ background-color: var(--light-background);
 }
 
 .team-list {
+    display: flex;
+    flex-wrap: wrap;
 
 }
 
-.team-member {
+.team-member:not(:nth-child(4n)) {
+    margin-right: 24px;
 
+}
+
+.team-list > .team-member {
+    flex-basis: calc(100% / 4 - 24px);
 }
 
 .team-member-photo {
