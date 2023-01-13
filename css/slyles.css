@@ -59,6 +59,18 @@ ul {
     height: auto;
 }
 
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
 /* header */
 .header {
     background-color: #FFFFFF;
@@ -214,9 +226,6 @@ color: var(--hover-focus-color);
 
 } 
 
-.section.values {
-    padding-top: 92.506px;
-}
 
 .values-title {
     visibility: hidden;
@@ -394,10 +403,6 @@ background-color: var(--overlays-shadows-headings);
 /* works-buttons (filters) */
 .works {
 
-}
-
-.section.works {
-    padding-top: 83.203px;
 }
 
 .works-title {
