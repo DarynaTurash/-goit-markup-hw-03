@@ -465,7 +465,6 @@ margin-bottom: 72px;
 .card {
     width: calc((100% - 72px) / 3);
     margin: 24px 12px 24px 12px;
-    border: 1px solid #E7E9FC;
     }
 
 .card-link {
@@ -480,8 +479,11 @@ margin-bottom: 72px;
     padding-top: 32px;
     padding-bottom: 32px;
     padding-left: 16px;
-    
-}
+    border-bottom: 1px solid #E7E9FC;
+    border-left: 1px solid #E7E9FC;
+    border-right: 1px solid #E7E9FC;
+    }
+
 
 .card-title {
     font-weight: 500;
